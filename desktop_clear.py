@@ -2,14 +2,16 @@ import os
 import shutil
 import time
 
-EXCEPTIONS = ["desktop.ini", "exception_1.txt", "excepction_2.avi"]
+"""Files not to move"""
+EXCEPTIONS = ["desktop.ini", "exception_1.txt", "exception_2.avi"]
+
 date = time.strftime("%d.%m.%Y")
-BACKUP = f"g:/Desktop_backups/{date}"
-
+backup_path = "g:/Desktop_backups/{}".format(date)
 os.makedirs(date, exist_ok=True)
-os.chdir("h:/Users/J/Desktop")
-folder = os.listdir()
 
-for file in folder:
+desktop_path = os.chdir("h:/Users/J/Desktop")
+desktop_files = os.listdir()
+
+for file in desktop_files:
     if file not in EXCEPTIONS:
-        shutil.move(file, BACKUP)
+        shutil.move(file, backup_path)
