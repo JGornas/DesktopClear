@@ -2,12 +2,12 @@ import os
 import shutil
 import time
 
-DATE = time.strftime("%d.%m.%Y")
+date = time.strftime("%d.%m.%Y")
 EXCEPTIONS = ["desktop.ini", "plan_programowanie_2018.txt", "django_tutorial"]
-BACKUP = f"g:/Desktop_backups/{DATE}"
+BACKUP = f"g:/Desktop_backups/{date}"
 
-os.makedirs(DATE, exist_ok=True)
-os.chdir("h:/Users/Jake/Desktop")
+os.makedirs(date, exist_ok=True)
+os.chdir("h:/Users/J/Desktop")
 folder = os.listdir()
 
 for file in folder:
