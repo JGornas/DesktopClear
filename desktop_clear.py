@@ -2,8 +2,8 @@ import os
 import shutil
 import time
 
+EXCEPTIONS = ["desktop.ini", "exception_1.txt", "excepction_2.avi"]
 date = time.strftime("%d.%m.%Y")
-EXCEPTIONS = ["desktop.ini", "plan_programowanie_2018.txt", "django_tutorial"]
 BACKUP = f"g:/Desktop_backups/{date}"
 
 os.makedirs(date, exist_ok=True)
