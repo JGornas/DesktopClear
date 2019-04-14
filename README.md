@@ -18,6 +18,7 @@ python desktop_clear.py
 ```
 Execute the script. It will move all files that are not excepted to a new backup directory.
 
+This can be automated using eg. Task Scheduler (Windows)
 
 ## Contributing
 For changes, please open an issue to discuss what you would like to change.
