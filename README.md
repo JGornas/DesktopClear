@@ -2,6 +2,7 @@
 
 
 Desktop_clear is a Python script for keeping the desktop out of unwanted files that gather over time.
+Python 3.6 dependant (f strings).
 
 ## Installation
 
