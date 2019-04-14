@@ -1,17 +1,20 @@
 import os
-import shutil
-import time
+from shutil import move
+from time import strftime
 
-"""Files not to move"""
-EXCEPTIONS = ["desktop.ini", "exception_1.txt", "exception_2.avi"]
+"""To skip files or folders put them in exceptions."""
+EXCEPTIONS = ["desktop.ini", "exception_1.txt", "exception_2.avi", "Projekty"]
 
-date = time.strftime("%d.%m.%Y")
-backup_path = "g:/Desktop_backups/{}".format(date)
-os.makedirs(date, exist_ok=True)
+"""Desktop folder path: 'path' + 'desktop_folder'"""
+DESKTOP_PATH = os.path.join("C:\\", "Users", "Jake", "Desktop")
 
-desktop_path = os.chdir("h:/Users/J/Desktop")
-desktop_files = os.listdir()
+"""Backup folder path: 'path' + 'backup_folder' + 'current_date'"""
+BACKUP_PATH = os.path.join("D:\\", "Desktop_backups", f"{strftime('%m.%d.%Y')}", "")
+
+os.makedirs(BACKUP_PATH, exist_ok=True)
+os.chdir(DESKTOP_PATH)
+desktop_files = os.listdir(os.getcwd())
 
 for file in desktop_files:
     if file not in EXCEPTIONS:
-        shutil.move(file, backup_path)
+        move(file, BACKUP_PATH)
