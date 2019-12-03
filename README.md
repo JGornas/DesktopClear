@@ -1,22 +1,21 @@
 # Scripts : Desktop_clear
 
 
-Desktop_clear is a Python script for keeping the desktop out of unwanted files that gather over time.
+Desktop_clear - Python script for keeping the desktop out of unwanted files that gather over time.
 
-Python 3.6 dependant (f strings).
+Python 3.6.
 
 ## Installation
 
-Clone and open the .py file.
-Under DESKTOP_PATH variable enter the path to your desktop. Repeat at BACKUP_PATH with path to backup folder.
-To skip specific files or folders add them to EXCEPTIONS list.
+Open the desktop_clear.py file.
+Set up your desktop path, exceptions and backup folder path.
 
 ## Usage
 
 ```python
 python desktop_clear.py
 ```
-Execute the script. It will move all files that are not excepted to a new backup directory.
+Execute the script. It will move all files excluding exceptions into a folder named current Month.Day.Year.
 
 This can be automated using eg. Task Scheduler (Windows)
 
